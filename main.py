@@ -2,22 +2,31 @@
 MAIN
 """
 
-from library.extract import extract
+import library.extract
 from library.transform_load import load
 from library.query_join import complex_query
 
 
 def main():
-    """Main function for the Complex SQL operations"""
-    # extract
-    extract()
+    """Main function"""
 
-    # transform and load
+    library.extract.extract()
+
+    library.extract.process_with_pyspark()
+
     load()
 
-    # query
     complex_query()
 
 
 if __name__ == "__main__":
     main()
+
+
+# if __name__ == "__main__":
+#     extracted_file_path = extract(
+#         url="https://example.com/data.csv", file_path="data/output.csv"
+#     )
+
+#     if extracted_file_path:
+#         process_with_pyspark(extracted_file_path)
