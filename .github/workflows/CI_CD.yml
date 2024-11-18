@@ -1,0 +1,26 @@
+name: CI/CD
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: 3.12
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint with Python
+      run: |
+        make lint
+    - name: Test with Python
+      env:
+          DATABRICKS_KEY: ${{ secrets.DATABRICKS_KEY }}
+          SERVER_HOSTNAME: ${{ secrets.SERVER_HOSTNAME }}
+          HTTP_PATH: ${{ secrets.HTTP_PATH }}
+      run: |
+        make test
+    - name: Format code with Python Black
+      run: |
+        make format
