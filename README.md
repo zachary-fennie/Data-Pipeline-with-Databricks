@@ -1,9 +1,9 @@
-[![CI/CD](https://github.com/zfennie/Complex-SQL-Query-for-Databricks/actions/workflows/CI_CD.yml/badge.svg)](https://github.com/zfennie/Complex-SQL-Query-for-Databricks/actions/workflows/CI_CD.yml)
+[![CI/CD](https://github.com/zachary-fennie/Data-Pipeline-with-Databricks/actions/workflows/CI_CD.yml/badge.svg)](https://github.com/zachary-fennie/Data-Pipeline-with-Databricks/actions/workflows/CI_CD.yml)
 
 
 
-# Fennie's Complex SQL Query for Databricks
-## Building off of the Python scripting for the ETL-CRUD pipeline, the Complex SQL Query project will extract data from an external source, connect and load the data into a Databricks enivronment, and join the results of a math operation to the table in Databricks with a SQL script.
+# Fennie's Data Pipeline for Databricks
+## Building off of previous ETL-CRUD and SQL pipelines, the Data Pipeline for Databricks will extract data from an external source, connect and load the data into a Databricks enivronment, and join the results of a math operation to the table in Databricks with a SQL script.
 
 
 
