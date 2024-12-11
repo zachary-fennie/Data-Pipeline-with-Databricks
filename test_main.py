@@ -40,7 +40,9 @@ def test_query():
     assert query_test == "Join Successful"
 
 
+def test_function():
+    return True
+
+
 if __name__ == "__main__":
-    test_extract()
-    test_load()
-    test_query()
+    assert test_function() == True

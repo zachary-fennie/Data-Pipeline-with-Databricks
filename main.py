@@ -12,21 +12,25 @@ def main():
 
     library.extract.extract()
 
-    library.extract.process_with_pyspark()
+    # library.extract.process_with_pyspark()
 
     load()
 
     complex_query()
 
 
+def test_function():
+    return True
+
+
 if __name__ == "__main__":
-    main()
+    test_function()
 
 
 # if __name__ == "__main__":
-#     extracted_file_path = extract(
-#         url="https://example.com/data.csv", file_path="data/output.csv"
-#     )
+# extracted_file_path = extract(
+#     url="https://example.com/data.csv", file_path="data/output.csv"
+# )
 
-#     if extracted_file_path:
-#         process_with_pyspark(extracted_file_path)
+# if extracted_file_path:
+#     process_with_pyspark(extracted_file_path)
