@@ -45,4 +45,4 @@ def test_function():
 
 
 if __name__ == "__main__":
-    assert test_function() == True
+    assert test_function() is True
