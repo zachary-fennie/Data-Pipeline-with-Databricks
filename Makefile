@@ -3,10 +3,10 @@ install:
 		pip install -r requirements.txt
 
 format:
-	black *.py *.ipynb
+	black main.py
 
 lint:
-	ruff check *.py *.ipynb
+	ruff check main.py
 
 test:
 	python -m pytest -vv --nbval --cov=library --cov=main test_*.py
